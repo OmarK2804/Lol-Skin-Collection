@@ -1,0 +1,31 @@
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
+    
+    <h1>{{ application_name }}</h1>
+    
+    <h5>Name: </h5>
+    <p>{{ name }}</p> <!-- Change it to your name -->
+    <h5>Class: </h5>
+    <p>{{ class }}</p> <!-- Change it to your class -->
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Set</th>
+            <th>Tier</th>
+            <th>Price</th>
+        </tr>
+        {% for data in skin_description %}
+        <tr>
+            <td>{{ data.name }}</td>
+            <td>{{ data.set }}</td>
+            <td>{{ data.tier }}</td>
+            <td>{{ data.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+<!-- References: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_th -->
