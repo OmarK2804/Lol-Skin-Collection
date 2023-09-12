@@ -5,8 +5,8 @@ After that, I create a django application. I make sure to register the django ap
 I use the internet to get references and chatgpt to help me with syntax error and server error
 
 • Client request -----> urls.py -----> views.py <-----> models.py
-                                           |
-                                           |
+                                           I
+                                           I
                                            V
                                           HTML
 
