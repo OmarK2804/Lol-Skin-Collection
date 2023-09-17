@@ -4,11 +4,7 @@ After that, I create a django application. I make sure to register the django ap
 
 I use the internet to get references and chatgpt to help me with syntax error and server error
 
-• Client request -----> urls.py -----> views.py <-----> models.py
-                                           I
-                                           I
-                                           V
-                                          HTML
+• ![](./diagram.drawio.svg)
 
 The URL that is requested by the client must be matched to the urls in 'urls.py', then 'views.py' take the client request. 'views.py' may interact with 'models.py' to retrieve data. After that, 'views.py' renders the HTML template then return that as an output or response to the request
 
