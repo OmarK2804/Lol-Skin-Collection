@@ -1,45 +1,46 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from main.forms import ProductForm
+from main.models import Item
+from django.http import HttpResponse
+from django.core import serializers
 
 # Create your views here.
+
 def show_main(request):
-    skin_description = [
-        {
-            'name': 'Elementalist Lux',
-            'set': 'Elementalist',
-            'tier': 'Ultimate',
-            'price': '3250 RP',
-        },
-        {
-            'name': 'Hextech Annie',
-            'set': 'Hextech',
-            'tier': 'Mythic',
-            'price': '10 Hextech Gems',
-        },
-        {
-            'name': "Gentleman Cho'gath",
-            'set': 'High Society',
-            'tier': 'Legendary',
-            'price': '1820 RP',
-        },
-        {
-            'name': 'High Noon Lucian',
-            'set': 'High Noon',
-            'tier': 'Legendary',
-            'price': '1820 RP',
-        },
-        {
-            'name': 'Nightbringer Yasuo',
-            'set': 'Nightbringer and Dawnbringer',
-            'tier': 'Legendary',
-            'price': '1820 RP',
-        }
-    ]
+    products = Item.objects.all()
 
     context = {
-        'application_name': 'League of Legends Skin Collection',
-        'name': 'Omar Khalif Muchzi',
-        'class': 'Platform-Based Development',
-        'skin_description': skin_description
+        'name': 'Omar Khalif Muchzi', # Your name
+        'class': 'Platform-Based Development KKI', # Your PBP Class
+        'products': products
     }
 
-    return render(request, 'main.html', context)
+    return render(request, "main.html", context)
+
+def create_product(request):
+    form = ProductForm(request.POST or None)
+
+    if form.is_valid() and request.method == "POST":
+        form.save()
+        return HttpResponseRedirect(reverse('main:show_main'))
+
+    context = {'form': form}
+    return render(request, "create_product.html", context)
+
+def show_xml(request):
+    data = Item.objects.all()
+    return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+
+def show_json(request):
+    data = Item.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_xml_by_id(request, id):
+    data = Item.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+
+def show_json_by_id(request, id):
+    data = Item.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
