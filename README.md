@@ -66,10 +66,10 @@ Screenshot JSON by ID
 ### • Create two user accounts with three dummy data entries for each account using the model previously created in the application.
 
 First account
-
+[![Screenshot-65.png](https://i.postimg.cc/Hs3SRbsB/Screenshot-65.png)](https://postimg.cc/4m7bh7c9)
 
 Second account
-
+[![Screenshot-66.png](https://i.postimg.cc/W1C7c8R6/Screenshot-66.png)](https://postimg.cc/gxyhvv2n)
 
 ### • What is UserCreationForm in Django? Explain its advantages and disadvantages.
 
