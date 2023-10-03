@@ -115,7 +115,7 @@ Specifies a section of a document intended for navigation. It is commonly used t
 Indicates the main content of the document. There should be only one < main > element per page, and it helps assistive technologies and search engines understand the primary content.
 
 4. "< input >"
-< input > elements have various types (text, password, email, checkbox, radio, etc.) and are used for user input forms. HTML5 introduced new input types and attributes for improved form validation and user experience.
+Elements have various types (text, password, email, checkbox, radio, etc.) and are used for user input forms. HTML5 introduced new input types and attributes for improved form validation and user experience.
 
 ### • What are the differences between margin and padding?
 
