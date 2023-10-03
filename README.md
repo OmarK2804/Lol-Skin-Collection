@@ -97,4 +97,17 @@ First, after adding new necessary imports in 'views.py' inside the main folder I
 
 To add a last login feature and displaying it on the main page, we have to add the necessary imports in 'views.py' then modify the 'login_user', 'logout_user', and 'show_main' functions to create a last login cookie data to the response which will be displayed in the main page and delete the last login cookie when the user logs out. Then, modify the 'main.html' to display the last login data. At last, to connect the item model to the user model, modifiy 'models.py' by adding import user and add user in the item class. Then, modify the 'create_product' function in 'views.py' to set the user field to the user object associated with the currently logged-in user, indicating that the product belongs to that user. Then, also modify the 'show_main' function to change the hardcoded username with the username of the logged-in user on the main page. Because I changed something in 'models.py', I have to make a migration.
 
+## Assignment 5
+
+### • Explain the purpose of some CSS element selector and when to use it.
+
+### • Explain some of the HTML5 tags that you know.
+
+### • What are the differences between margin and padding?
+
+### • What are the differences between the CSS framework Tailwind and Bootstrap? When should we use Bootstrap rather than Tailwind, and vice versa?
+
+### • Explain how you implemented the checklist above step-by-step (not just following the tutorial).
+
+
 I use the internet to get references and chatgpt to help me with syntax error and server error

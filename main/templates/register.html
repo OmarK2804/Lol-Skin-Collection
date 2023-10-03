@@ -1,3 +1,7 @@
+<style> 
+
+</style>
+
 {% extends 'base.html' %}
 
 {% block meta %}
@@ -6,29 +10,43 @@
 
 {% block content %}  
 
-<div class = "login">
-    
-    <h1>Register</h1>  
-
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
-
-    {% if messages %}  
-        <ul>   
-            {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
-    {% endif %}
-
+<body style="background-color: bisque;"> 
+<div class="container h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-6 align-self-center">
+            <div class="card text-center">
+                <h5 class="card-header" style="background-color: rgb(147, 105, 210);">Register</h5>
+                    <div class = "login" style="background-color: rgb(175, 167, 187);">
+                        
+                            <form method="POST" >  
+                                {% csrf_token %}  
+                                <table>  
+                                    {{ form.as_table }}  
+                                    <tr>  
+                                        <td></td>
+                                        <td><input type="submit" name="submit" value="Daftar" style="background-color: rgb(147, 105, 210);"/></td>  
+                                    </tr>  
+                                </table>  
+                            </form>
+                        
+                        {% if messages %}  
+                            <ul>   
+                                {% for message in messages %}  
+                                    <li>{{ message }}</li>  
+                                    {% endfor %}  
+                            </ul>   
+                        {% endif %}
+                    
+                        <a href="{% url 'main:login' %}">
+                            <button  style="background-color: rgb(147, 105, 210);">
+                                Back
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
 </div>  
-
+</body>
 {% endblock content %}

@@ -1,7 +1,31 @@
+<style> 
+
+</style>
+
 {% extends 'base.html' %}
 
 {% block content %}
+
+<body style="background-color: bisque;"> 
+
+    <nav class="navbar" style="background-color:  rgb(147, 105, 210);" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Omar Khalif</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{% url 'main:show_main' %}">Home</a>
+              <a class="nav-link" href="{% url 'main:logout' %}">Logout</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
     <h1>League of Legends Skin Collection</h1>
+
+    <br />
 
     <h5>Name:</h5>
     <p>{{name}}</p> <!-- Change it to your name -->
@@ -11,38 +35,63 @@
 
     <p>You have saved {{counter}} item(s) in this application</p>
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Description</th>
-    </tr>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6 align-self-center">
+                <div class="card text-center">
+                    <h5 class="card-header" style="background-color: rgb(147, 105, 210);">Login</h5>
+                    <div class="card-body " style="background-color: rgb(175, 167, 187);">
 
-    {% comment %} Below is how to show the product data {% endcomment %}
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Description</th>
+                            </tr>
 
-    {% for product in products %}
-        <tr>
-            <td>{{product.name}}</td>
-            <td>{{product.amount}}</td>
-            <td>{{product.description}}</td>
-        </tr>
-    {% endfor %}
-</table>
+                            {% comment %} Below is how to show the product data {% endcomment %}
+
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{product.name}}</td>
+                                    <td>{{product.amount}}</td>
+                                    <td>{{product.description}}</td>
+                                    <td>
+                                        <a href="{% url 'main:edit_product' product.pk %}">
+                                            <button style="background-color: rgb(147, 105, 210);">
+                                                Edit
+                                            </button>
+                                        </a>
+                                        <a href="{% url 'main:delete_product' product.pk %}">
+                                            <button style="background-color: rgb(147, 105, 210);">
+                                                Delete
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <br />
 
 <h5>Last login session: {{ last_login }}</h5>
 
 <a href="{% url 'main:create_product' %}">
-    <button>
+    <button style="background-color: rgb(147, 105, 210);">
         Add New Item
     </button>
 </a>
 
 <a href="{% url 'main:logout' %}">
-    <button>
+    <button style="background-color: rgb(147, 105, 210);">
         Logout
     </button>
 </a>
 
+</body>
 {% endblock content %}

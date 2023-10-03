@@ -2,7 +2,9 @@
 
 </style>
 
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+
+{% load static %}
 
 {% block content %}
 
@@ -27,7 +29,7 @@
         <div class="row justify-content-center h-100">
             <div class="col-6 align-self-center">
                 <div class="card text-center">
-                    <h5 class="card-header" style="background-color: rgb(147, 105, 210);">Add New Product</h5>
+                    <h5 class="card-header" style="background-color: rgb(147, 105, 210);">Edit Product</h5>
                     <div class="card-body " style="background-color: rgb(175, 167, 187);">
 
                         <form method="POST">
@@ -37,7 +39,7 @@
                                 <tr>
                                     <td></td>
                                     <td>
-                                        <input type="submit" value="Add Product" style="background-color: rgb(147, 105, 210);"/>
+                                        <input type="submit" value="Edit Product" style="background-color: rgb(147, 105, 210);"/>
                                     </td>
                                 </tr>
                             </table>
@@ -49,4 +51,5 @@
     </div>
 
 </body>
+
 {% endblock %}
