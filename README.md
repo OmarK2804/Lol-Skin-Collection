@@ -101,13 +101,34 @@ To add a last login feature and displaying it on the main page, we have to add t
 
 ### • Explain the purpose of some CSS element selector and when to use it.
 
+CSS provides a variety of element selectors that allow you to target and style specific HTML elements in a web page. Some of the selector in CSS are element selector, ID selector, and class selector. Each selector has a specific purpose and use case. Element selector allows us to apply styles to all elements with the same HTML tag. The ID Selector uses the ID of an HTML tag as its selector. IDs are unique within a single web page and can be added to HTML template pages. The Class Selector allows us to group elements with similar characteristics.
+
 ### • Explain some of the HTML5 tags that you know.
+
+1. "< header >"
+Defines a container for introductory content or a set of navigation links. Typically used for the top section of a web page, which may include the site's logo, site title, and main navigation.
+
+2. "< nav >"
+Specifies a section of a document intended for navigation. It is commonly used to wrap around navigation menus, links, or lists.
+
+3. "< main >"
+Indicates the main content of the document. There should be only one < main > element per page, and it helps assistive technologies and search engines understand the primary content.
+
+4. "< input >"
+< input > elements have various types (text, password, email, checkbox, radio, etc.) and are used for user input forms. HTML5 introduced new input types and attributes for improved form validation and user experience.
 
 ### • What are the differences between margin and padding?
 
+In CSS, both margin and padding are used to control the spacing around an element, but they have different purposes and affect the layout of an element in distinct ways. Margins are used to create space outside the boundary of an element. They control the gap or spacing between the element and its neighboring elements. Padding, on the other hand, is used to create space within the boundary of an element. It controls the space between the content of the element and its inner edge.
+
 ### • What are the differences between the CSS framework Tailwind and Bootstrap? When should we use Bootstrap rather than Tailwind, and vice versa?
 
+Tailwind CSS and Bootstrap are both popular CSS frameworks, but they have different philosophies, approaches, and use cases. Tailwind is highly customizable. You can configure and extend the framework to match your project's design system. This flexibility allows for a more tailored and unique design. While Bootstrap comes with a set of predefined styles that may require more effort to customize extensively. Use bootstrap for smaller file sizes and faster page loading times when using only the necessary components. Use tailwind for projects with unique and custom design requirements.
+
 ### • Explain how you implemented the checklist above step-by-step (not just following the tutorial).
+
+First, I edited my 'base.HTML' file so my web page will adapt to the size and behavior of mobile devices. Then, I added Bootstrap and JavaScript. After that, I added a navbar on all the templates inside the main folder except 'login.html' and 'register.html'. I also customize all the templates by adding colors, using cards, and etc. Then, I add edit function and delete function in 'views.py'. Then, I create 'edit_product.html' for showing the edit product page. After that, I add the URL path to urlpatterns list in 'urls.py' for the edit product and delete. I also import the functions that I just created in 'urls.py'. Then I modify the 'main.html' to add the button for edit product and delete.
+
 
 
 I use the internet to get references and chatgpt to help me with syntax error and server error
