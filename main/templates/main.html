@@ -1,5 +1,31 @@
 <style> 
+    .btn-standard {
+            width: 200px;
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px 20px;
+        }
 
+        table td, table th {
+            text-align: center;
+            /* Centering the content of all cells */
+            padding: 10px 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+        }
+
+        .amount-value {
+            margin: 0 10px;
+        }
 </style>
 
 {% extends 'base.html' %}
@@ -16,8 +42,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="{% url 'main:show_main' %}">Home</a>
-              <a class="nav-link" href="{% url 'main:logout' %}">Logout</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'main:show_main' %}" style="color: white;">Home</a>
+              <a class="nav-link" href="{% url 'main:logout' %}" style="color: white;">Logout</a>
             </div>
           </div>
         </div>
@@ -38,41 +64,38 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-6 align-self-center">
-                <div class="card text-center">
-                    <h5 class="card-header" style="background-color: rgb(147, 105, 210);">Login</h5>
-                    <div class="card-body " style="background-color: rgb(175, 167, 187);">
-
                         <table>
-                            <tr>
-                                <th>Name</th>
-                                <th>Amount</th>
-                                <th>Description</th>
-                            </tr>
-
-                            {% comment %} Below is how to show the product data {% endcomment %}
-
-                            {% for product in products %}
+                            <thead style="background-color: rgb(147, 105, 210); color: white;"> <!-- Add background and text color to the header -->
                                 <tr>
-                                    <td>{{product.name}}</td>
-                                    <td>{{product.amount}}</td>
-                                    <td>{{product.description}}</td>
-                                    <td>
-                                        <a href="{% url 'main:edit_product' product.pk %}">
-                                            <button style="background-color: rgb(147, 105, 210);">
-                                                Edit
-                                            </button>
-                                        </a>
-                                        <a href="{% url 'main:delete_product' product.pk %}">
-                                            <button style="background-color: rgb(147, 105, 210);">
-                                                Delete
-                                            </button>
-                                        </a>
-                                    </td>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Description</th>
+                                    <th>Configure</th>
                                 </tr>
-                            {% endfor %}
+                            </thead>
+                        
+                            <tbody style="background-color: rgb(175, 167, 187);">
+                                {% for product in products %}
+                                    <tr>
+                                        <td>{{product.name}}</td>
+                                        <td>{{product.amount}}</td>
+                                        <td>{{product.description}}</td>
+                                        <td>
+                                            <a href="{% url 'main:edit_product' product.pk %}">
+                                                <button style="background-color: rgb(147, 105, 210); color: white;"> <!-- Add background and text color to the buttons -->
+                                                    Edit
+                                                </button>
+                                            </a>
+                                            <a href="{% url 'main:delete_product' product.pk %}">
+                                                <button style="background-color: rgb(147, 105, 210); color: white;"> <!-- Add background and text color to the buttons -->
+                                                    Delete
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
                         </table>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -82,13 +105,13 @@
 <h5>Last login session: {{ last_login }}</h5>
 
 <a href="{% url 'main:create_product' %}">
-    <button style="background-color: rgb(147, 105, 210);">
+    <button style="background-color: rgb(147, 105, 210); color: white;">
         Add New Item
     </button>
 </a>
 
 <a href="{% url 'main:logout' %}">
-    <button style="background-color: rgb(147, 105, 210);">
+    <button style="background-color: rgb(147, 105, 210); color: white;">
         Logout
     </button>
 </a>
