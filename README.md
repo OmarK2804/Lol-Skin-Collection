@@ -129,6 +129,26 @@ Tailwind CSS and Bootstrap are both popular CSS frameworks, but they have differ
 
 First, I edited my 'base.HTML' file so my web page will adapt to the size and behavior of mobile devices. Then, I added Bootstrap and JavaScript. After that, I added a navbar on all the templates inside the main folder except 'login.html' and 'register.html'. I also customize all the templates by adding colors, using cards, and etc. Then, I add edit function and delete function in 'views.py'. Then, I create 'edit_product.html' for showing the edit product page. After that, I add the URL path to urlpatterns list in 'urls.py' for the edit product and delete. I also import the functions that I just created in 'urls.py'. Then I modify the 'main.html' to add the button for edit product and delete.
 
+## Assignment 6
 
+### • Explain the difference between asynchronous programming and synchronous programming.
+
+............................................................................................
+
+### • In the implementation of JavaScript and AJAX, there is an implemented paradigm called the event-driven programming paradigm. Explain what this paradigm means and give one example of its implementation in this assignment.
+
+............................................................................................
+
+### • Explain the implementation of asynchronous programming in AJAX.
+
+............................................................................................
+
+### • In this semester, the implementation of AJAX is done using the Fetch API rather than the jQuery library. Compare the two technologies and write down your opinion which technology is better to use.
+
+............................................................................................
+
+### • Explain how you implemented the checklist above step-by-step (not just following the tutorial).
+
+............................................................................................
 
 I use the internet to get references and chatgpt to help me with syntax error and server error
