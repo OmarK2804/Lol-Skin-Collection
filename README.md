@@ -123,7 +123,9 @@ In CSS, both margin and padding are used to control the spacing around an elemen
 
 ### • What are the differences between the CSS framework Tailwind and Bootstrap? When should we use Bootstrap rather than Tailwind, and vice versa?
 
-Tailwind CSS and Bootstrap are both popular CSS frameworks, but they have different philosophies, approaches, and use cases. Tailwind is highly customizable. You can configure and extend the framework to match your project's design system. This flexibility allows for a more tailored and unique design. While Bootstrap comes with a set of predefined styles that may require more effort to customize extensively. Use bootstrap for smaller file sizes and faster page loading times when using only the necessary components. Use tailwind for projects with unique and custom design requirements.
+Tailwind CSS and Bootstrap are both popular CSS frameworks, but they have different philosophies, approaches, and use cases. Tailwind is highly customizable. You can configure and extend the framework to match your project's design system. This flexibility allows for a more tailored and unique design. While Bootstrap comes with a set of predefined styles that may require more effort to customize extensively. 
+
+We should use bootstrap for smaller file sizes and faster page loading times when using only the necessary components. While we should use tailwind for projects with unique and custom design requirements.
 
 ### • Explain how you implemented the checklist above step-by-step (not just following the tutorial).
 
@@ -133,19 +135,23 @@ First, I edited my 'base.HTML' file so my web page will adapt to the size and be
 
 ### • Explain the difference between asynchronous programming and synchronous programming.
 
-............................................................................................
+Asynchronous programming and synchronous programming are two different approaches to managing the execution of code in a program. In synchronous programming, tasks are executed one after the other in a sequential manner. When a task is initiated, the program waits for it to complete before moving on to the next task. In asynchronous programming, tasks are initiated but not necessarily completed before moving on to the next task. Instead of waiting for a task to finish, the program can continue executing other tasks and come back to complete the initial task when it's done.
 
 ### • In the implementation of JavaScript and AJAX, there is an implemented paradigm called the event-driven programming paradigm. Explain what this paradigm means and give one example of its implementation in this assignment.
 
-............................................................................................
+The event-driven programming paradigm is a programming approach in which the flow of a program is determined by events, such as user actions or data arriving from external sources. In this paradigm, the program responds to these events as they occur, rather than following a predefined, sequential order of execution. 
+
+For example, in this assignment, if the user add a product by AJAX, the event-driven programming paradigm involves asynchronous operations, where tasks are initiated but do not block the main program's execution. This allows the program to perform multiple tasks concurrently without waiting for one to finish before starting another.
 
 ### • Explain the implementation of asynchronous programming in AJAX.
 
-............................................................................................
+AJAX allows web applications to send and receive data from a server without blocking the user interface. This asynchronous behavior enhances user experience by preventing the web page from freezing while waiting for server responses.
 
 ### • In this semester, the implementation of AJAX is done using the Fetch API rather than the jQuery library. Compare the two technologies and write down your opinion which technology is better to use.
 
-............................................................................................
+Fetch API and jQuery are technologies used for making asynchronous requests in web applications, but they have different features, advantages, and use cases. The Fetch API is a modern JavaScript API that is built directly into most web browsers, making it widely available without the need for additional libraries or dependencies. Fetch returns Promises, which are a more modern and consistent way to handle asynchronous operations in JavaScript. This makes error handling and chaining multiple requests more straightforward. While, jQuery was created to address cross-browser compatibility issues in older browsers, making it a valuable tool for handling inconsistencies. If your project needs to support older browsers, jQuery can be a helpful choice because it handles many browser-specific quirks. 
+
+In my opinion, if we are working on a modern web application and can rely on up-to-date browsers, it is better to use Fetch API due to their improved performance and the benefits of using Promises. But if we are working on a legacy project, it is better to use jQuery.
 
 ### • Explain how you implemented the checklist above step-by-step (not just following the tutorial).
 
