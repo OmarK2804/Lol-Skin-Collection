@@ -155,6 +155,6 @@ In my opinion, if we are working on a modern web application and can rely on up-
 
 ### • Explain how you implemented the checklist above step-by-step (not just following the tutorial).
 
-............................................................................................
+To implements AJAX in my code, first I need to create a new function in 'views.py' called 'get_product_json' to fetch the data as JSON and 'add_product_ajax' to add new product to the database using AJAX. I also imported the decorator 'csrf_exempt' and put it above the 'add_product_ajax' function. Then, I imported the functions I just created and add the URL paths inside urlpatterns list in 'urls.py' inside the main folder. Then, inside 'main.html', I add a '< script >' tag and add the functions 'getProducts' to get the JSON data asynchronously, 'refreshProducts' to refresh the product data asynchronously, and 'addProduct' to add a new product using the form's data using AJAX. I also set the 'addProduct' function to on click. Then I add the new table structure and its form modal using Bootstrap.
 
-I use the internet to get references and chatgpt to help me with syntax error and server error
+*I use the internet to get references and chatgpt to help me with syntax error and server error*
